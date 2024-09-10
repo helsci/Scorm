@@ -49,6 +49,16 @@ catch(e)
     catch(e)
     {}
 }
+function findAPI() {
+    // Add a condition to disable LMS API lookups when running outside an LMS
+    if (window.location.hostname === 'yourusername.github.io') {
+        console.log('No LMS detected, skipping API calls.');
+        return null; // Bypass LMS API lookup
+    }
+    
+    // Original SCORM API lookup logic
+    // ...
+}
 	
 function DoFinish()
 {
